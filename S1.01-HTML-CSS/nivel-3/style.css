@@ -1,0 +1,193 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos base: escritorio */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #2f3e50;
+  padding: 20px;
+  border: 8px solid black;
+}
+
+.logo, .nav, .social {
+  background: #de5656;
+  padding: 20px;
+  border: 4px solid black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.banner {
+  background: #ffd000;
+  padding: 100px 0;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 8px solid black;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+  border: 8px solid black;
+  padding: 20px;
+  background: #2f3e50;
+}
+
+.articles {
+  flex: 3;
+  background: #3d4056;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.article {
+  background: #4e8acb;
+  padding: 40px;
+  border: 4px solid black;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.navegacion {
+  grid-column: 1 / 3;
+  background: #7fa1b7;
+  padding: 20px;
+  border: 4px solid black;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.publicidad {
+  flex: 1;
+  background: #d94a48;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 8px solid black;
+}
+
+.pub-item {
+  background: #ffd700;
+  padding: 40px;
+  border: 4px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pie {
+  background: #f6d45c;
+  padding: 40px;
+  margin-top: 20px;
+  border: 8px solid black;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Tablet: 768px - 1024px */
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+
+  .publicidad {
+    order: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .pub-item {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* Móvil: hasta 767px */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 5px;
+  }
+
+  .header {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .logo, .nav, .social {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  .banner {
+    padding: 50px 0;
+    font-size: 1.5rem;
+  }
+
+  .main {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .article {
+    padding: 30px;
+    font-size: 1.2rem;
+  }
+
+  .navegacion {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  .publicidad {
+    padding: 10px;
+    gap: 10px;
+    order: 2; /* Va después de la navegación */
+  }
+
+  .pub-item {
+    padding: 30px;
+    font-size: 1.2rem;
+    min-width: 100%;
+  }
+
+  .pie {
+    padding: 25px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
