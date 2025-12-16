@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.bloque_header {
+    background: black;
+    padding: 20px;
+}
+
+.fila_header {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #2c3e50;
+}
+
+.logo,
+.social {
+    flex: 1;
+    background: #ff6b6b;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.nav {
+    flex: 3;
+    background: #ff6b6b;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.separador {
+    height: 20px;
+    background: black;
+}
+
+.banner {
+    background: #ffd700;
+    padding: 20px;
+    border: 20px solid orange;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.espacio {
+    height: 20px;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: black;
+}
+
+.izquierda {
+    flex: 4;
+    background: #556d86;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.article {
+    background: #2980b9;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.navegacion {
+    grid-column: 1 / -1;
+    background: #3498db;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.derecha {
+    flex: 1;
+    background: #e74c3c;
+    padding: 20px;
+}
+
+.publicidad {
+    background: #f1c40f;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.pie {
+    background: #f9e79f;
+    padding: 20px;
+    border: 20px solid black;
+    font-weight: bold;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .fila_header {
+        display: block;
+    }
+
+    .main {
+        display: block;
+    }
+
+    .separador_negro {
+        display: block;
+        height: 20px;
+        background: black;
+    }
+}
+
+/* Móvil */
+
+@media (max-width: 480px) {
+
+    .izquierda {
+        grid-template-columns: 1fr;
+    }
+}
+
+

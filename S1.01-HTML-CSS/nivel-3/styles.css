@@ -1,0 +1,247 @@
+/* =============================================================================
+   REINICIO GENERAL
+   ============================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ 
+/* =============================================================================
+   CONTENEDOR PRINCIPAL - Escritorio
+   ============================================================================= */
+.contenedor {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px; /* Evita scroll horizontal */
+}
+
+/* =============================================================================
+   BLOQUE SUPERIOR (LOGO + NAV + SOCIAL + BANNER)
+   ============================================================================= */
+.bloque_header {
+    background: black;
+    padding: 20px;
+}
+
+.fila_header {
+    background: #2c3e50;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.logo,
+.social {
+    background: #d96b6b;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.nav {
+    background: #d96b6b;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    flex: 3;
+}
+
+.separador {
+    height: 20px;
+    background: black;
+}
+
+.banner {
+    background: #ffd700;
+    padding: 20px;
+    border: 20px solid orange;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* =============================================================================
+   ZONA CENTRAL (ARTÍCULOS + PUBLICIDAD)
+   ============================================================================= */
+.espacio {
+    height: 20px;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    background: black;
+    padding: 20px;
+}
+
+.izquierda {
+    flex: 4;
+    background: #556d86;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.article {
+    background: #1e6cb8;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navegacion {
+    grid-column: 1 / -1;
+    background: #72a0ba;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.derecha {
+    flex: 1;
+    background: #d94a48;
+    padding: 10px; /* ← Ajustado para reducir espacio inferior en escritorio */
+}
+
+.publicidad {
+    background: #ffe600;
+    padding: 20px;
+    margin-bottom: 10px; /* ← Ajustado para reducir espacio excesivo */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Separador entre navegación y publicidad (solo en móvil/tableta) */
+.separador_negro {
+    display: none; /* Oculto en escritorio */
+}
+
+/* =============================================================================
+   PIE DE PÁGINA
+   ============================================================================= */
+.pie {
+    background: #f4e590;
+    padding: 20px;
+    border: 20px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =============================================================================
+   MEDIA QUERY: TABLETA (≤ 768px)
+   ============================================================================= */
+@media (max-width: 768px) {
+    .fila_header {
+        display: block;
+        background: #2c3e50;
+        padding: 20px;
+    }
+
+    .logo,
+    .nav {
+        width: 100%;
+        background: #ff6b6b;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .social {
+        width: 100%;
+        background: #ff6b6b;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        /* El margen inferior se omite para que no haya espacio adicional */
+    }
+
+    .banner {
+        font-size: 25px;
+    }
+
+    .main {
+        display: block;
+        background: black;
+        padding: 20px;
+    }
+ 
+    .izquierda {
+        width: 100%;
+        background: #556d86;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .article {
+        background: #2980b9;
+        font-size: 15px;
+    }
+
+    .navegacion {
+        background: #3498db;
+        font-size: 15px;
+    }
+
+    .derecha {
+        width: 100%;
+        background: #e74c3c;
+        /*padding: 10px;*/ /* ← Ajustado para reducir espacio inferior */
+        padding: 20;
+    }
+
+    .publicidad {
+        background: #f1c40f;
+        padding: 20px;
+        margin-bottom: 0; /* ← Corregido: espacio consistente */
+        font-size: 20px;
+        font-weight: bold;
+        border: 5px solid #e74c3c;
+    }
+
+    /* Mostrar separador negro entre navegación y publicidad */
+    .separador_negro {
+        display: block;
+        height: 20px;
+        background: black;
+        /*margin: 20px 0;*/
+    }
+
+    .pie {
+        background: #f9e79f;
+    }
+}
+
+/* =============================================================================
+   MEDIA QUERY: MÓVIL (≤ 480px)
+   ============================================================================= */
+@media (max-width: 480px) {
+    .izquierda {
+        grid-template-columns: 1fr; /* Artículos en una sola columna */
+    }
+
+    .logo,
+    .nav,
+    .social {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .banner {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .article,
+    .navegacion,
+    .publicidad {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
