@@ -1,0 +1,107 @@
+/* REINICIO GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ 
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*  HEADER CON IMAGEN DE FONDO */
+.header-bg {
+    background-image: url("img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* FILA SUPERIOR (LOGO + NAV + SOCIAL)*/
+.fila_header {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* NAV (MENÚ DE NAVEGACIÓN) */
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    /* Efecto roll-over */
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ff914d;
+}
+
+/* SOCIAL (REDES SOCIALES) */
+.social a {
+    color: white;
+    margin-left: 10px;
+    font-size: 18px;
+    /* Efecto roll-over */
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #ff914d;
+}
+
+/* TEXTO CENTRAL (BANNER) */
+.banner-texto {
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+.banner-texto h1 {
+    font-size: 48px;
+    /* Semitransparente: solo el texto, no el fondo */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-texto p {
+    font-size: 20px;
+    margin-top: 10px;
+    /* Semitransparente: solo el texto, no el fondo */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* BANNER SEMITRANSPARENTE */
+.banner-semitransparente {
+    text-align: center;
+    color: #ff914d; /* Color naranja de la tarea */
+    padding: 20px;
+    /* Fondo semitransparente */
+    background: rgba(255, 255, 255, 0.3);
+    /* Posicionamiento absoluto para que se superponga al fondo */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.banner-semitransparente p {
+    font-size: 24px;
+    font-style: italic;
+}
